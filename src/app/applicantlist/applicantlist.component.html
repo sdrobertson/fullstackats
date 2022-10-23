@@ -1,0 +1,33 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+<!--  <div fxFlex>-->
+<!--    <div>-->
+<!--      <h3>Menu</h3>-->
+<!--      <hr>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div fxFlex *ngIf="applicants" [@expand]>
+    <div fxFlex="">
+      <h2>Applicants</h2>
+      <mat-list *ngIf="applicants" [@expand]>
+        <mat-list-item *ngFor="let applicant of applicants">
+          <img matListAvatar  src="../../assets/images/user.png">
+          <h1 mat-line> {{ applicant.last_name }}, {{ applicant.first_name }} </h1>
+          <p mat-line>
+            <span> {{ applicant.emailaddress}} </span>
+          </p>
+          <p mat-line>
+            <span> {{ applicant.phonenumber}} </span>
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+
+
+
+
+</div>

@@ -1,0 +1,7 @@
+<h1>Applicants</h1>
+
+<mat-list>
+  <p mat-list-item *ngFor="let applicant of applicants">{{ applicant.id }} {{ applicant.first_name }} {{ applicant.middle_name }} {{ applicant.last_name }} {{ applicant.emailaddress}} {{ applicant.phonenumber }}</p>
+</mat-list>
+
+<app-joblist></app-joblist>

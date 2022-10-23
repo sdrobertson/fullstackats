@@ -1,0 +1,29 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+<div [@expand]>
+  <h2>User Profile</h2>
+  <pre>First Name : Shane</pre>
+  <pre>Last Name : Robert0</pre>
+  <pre>Email : email@email.com</pre>
+  <pre>Tel : +12443534534</pre>
+</div>
+  <h2>Applications</h2>
+  <!-- two line list -->
+  <mat-list class="firstCol">
+    <mat-list-item *ngFor="let job of jobs">
+      <h3 mat-line> {{job.title}} </h3>
+      <p matLine>
+        <span class="demo-2"> {{ job.city }}, {{ job.country}} </span>
+      </p>
+      <p mat-line>
+        <span> {{job.description}} </span>
+      </p>
+      <p mat-line>
+        <button mat-button color="primary">Cancel</button>
+      </p>
+
+    </mat-list-item>
+  </mat-list>
+</div>
+

@@ -1,0 +1,45 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+<h2>Job Listings</h2>
+  <!-- two line list -->
+  <mat-list class="firstCol">
+    <mat-list-item *ngFor="let job of jobs">
+      <h3 mat-line> {{job.title}} </h3>
+      <p matLine>
+        <span class="demo-2"> {{ job.city }}, {{ job.country}} </span>
+      </p>
+      <p mat-line>
+        <span> {{job.description}} </span>
+      </p>
+      <p mat-line>
+        <button mat-button color="primary">Apply</button>
+      </p>
+
+    </mat-list-item>
+  </mat-list>
+</div>
+<!--  <div fxFlex="50" *ngIf="jobs" [@expand]>-->
+<!--    <div fxFlex="">-->
+<!--      <h2>Applicants</h2>-->
+<!--      <mat-list *ngIf="jobs" [@expand]>-->
+<!--        <mat-list-item *ngFor="let job of jobs">-->
+<!--          <img matListAvatar  src="../../assets/images/alberto.png">-->
+<!--          <h1 mat-line> {{ job.industry }}, {{ job.city }}, {{ job.country}} </h1>-->
+<!--          <p mat-line>-->
+<!--            <span> {{ job.description}} </span>-->
+<!--          </p>-->
+
+<!--        </mat-list-item>-->
+<!--      </mat-list>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+<!--<mat-list>-->
+<!--  <p mat-list-item *ngFor="let job of jobs">{{ job.id }} {{ job.industry }} {{ job.team }} {{ job.description }} {{ job.city }} {{ job.country }}</p>-->
+<!--</mat-list>-->
+
